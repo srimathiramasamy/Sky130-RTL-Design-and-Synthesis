@@ -129,13 +129,35 @@ gtkwave testbenchfile.vcd
   
   The waveform viewer depicts the functionality of the desing with respect to the stimulus provided.
   
-  we have used the multipler code for the simulation
+  we have used the multipler code for the simulation.If there is select output follows input1 and if there is no select the output folows input0
   
 ![github-small](https://github.com/srimathiramasamy/Sky130-RTL-Design-and-Synthesis/blob/main/1.12.PNG)
   
-  testbench for the multiplexer
+  Testbench for the multiplexer : the testbench instantiates the design
+  dut stands for design under test
   
 ![github-small](https://github.com/srimathiramasamy/Sky130-RTL-Design-and-Synthesis/blob/main/1.11.PNG)
+
+##YOSYS
+
+Synthesizer is the tool which converts the RTL to the netlist. In this flow we use yosys as the synthesizer.
+
+![github-small](https://github.com/srimathiramasamy/Sky130-RTL-Design-and-Synthesis/blob/main/Y1.PNG)
+
+The design along with the library file is given to the synthesizer tool and the netlist is generated from it.
+Netlist is the representation of the design in terms of standard nelist,
+
+```
+yosys
+read_verilog designmodule.v
+```
+![github-small](https://github.com/srimathiramasamy/Sky130-RTL-Design-and-Synthesis/blob/main/1.13.PNG)
+![github-small](https://github.com/srimathiramasamy/Sky130-RTL-Design-and-Synthesis/blob/main/1.14.PNG)
+![github-small](https://github.com/srimathiramasamy/Sky130-RTL-Design-and-Synthesis/blob/main/1.15.PNG)
+![github-small](https://github.com/srimathiramasamy/Sky130-RTL-Design-and-Synthesis/blob/main/1.16.PNG)
+![github-small](https://github.com/srimathiramasamy/Sky130-RTL-Design-and-Synthesis/blob/main/1.17.PNG)
+![github-small](https://github.com/srimathiramasamy/Sky130-RTL-Design-and-Synthesis/blob/main/1.18.PNG)
+
 
  
  
