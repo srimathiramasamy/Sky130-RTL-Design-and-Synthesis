@@ -47,3 +47,10 @@ In this repo we have used the "IVERILOG" for out RTL code simulation.
  
  ![github-small](https://github.com/srimathiramasamy/Sky130-RTL-Design-and-Synthesis/blob/main/123.PNG)
  
+ The primary inputs given to the testbench where the design is instantiated from the stimulus generator and the outputs are verified by the stimulus observer, the testbench doesnot have primary input and primary output
+ 
+ ## iverilog simulation flow
+ 
+ 
+ 
+ 
