@@ -36,7 +36,7 @@ This repository includes the design and synthesis of RTL codes with the use of t
  The first day of the workhop covers the simaulation part of the RTL design alonng with the brief description about the usage of the tools such as iverilog, gtkwave and yosys. It also provides the detailed note on the sky130 library used. 
  There are many open source tools available for the front-end RTL design. The list of tools used in this repo are mentioned below
 
-## LAB SETUP
+### LAB SETUP
  
  * create a directory called 'VLSI' in the home path
  * install the vsdflow
@@ -60,7 +60,7 @@ files present in the directory
  ![github-small](https://github.com/srimathiramasamy/Sky130-RTL-Design-and-Synthesis/blob/main/1.1.PNG)
  
  
- ## gtkwave waveform viewer
+ ### gtkwave waveform viewer
  
  The tool for viewing the waveform is gtkwaveform viewer, where the window pops up containing the stimulus where the functionality of the RTL design can be justified.
  
@@ -78,7 +78,7 @@ files present in the directory
  ![github-small](https://github.com/srimathiramasamy/Sky130-RTL-Design-and-Synthesis/blob/main/1.6.PNG)
  ![github-small](https://github.com/srimathiramasamy/Sky130-RTL-Design-and-Synthesis/blob/main/1.7.PNG)
 
-## Simulator iverilog
+### Simulator iverilog
    Design is the set of verilog codes which intends to meet the specifications. The testbench is the setup appied to the desing with a set of test vector to check working of thedesign module.
    Simulator plays an important role in verifying the design by providing the different input stimulus to the design at different times to check the proper fuunctioning of the RTL code as mentioned in the specifications.  THere are various verilog simulators availabe such as 
 * iverilog
@@ -90,20 +90,20 @@ files present in the directory
 
 In this repo we have used the "IVERILOG" for out RTL code simulation.
 
-### Working of the simulator
+#### Working of the simulator
  It mainly relays on the change in the input. If there are is no change in the input test vector then there will be no chnage in the output, the simulator will not eveluate the output in this condition.
  
  ![github-small](https://github.com/srimathiramasamy/Sky130-RTL-Design-and-Synthesis/blob/main/123.PNG)
  
  The primary inputs given to the testbench where the design is instantiated from the stimulus generator and the outputs are verified by the stimulus observer, the testbench doesnot have primary input and primary output
  
- ### iverilog simulation flow
+ #### iverilog simulation flow
  
  The output of the simulator is a .vcd file where vcd stands for value change dump. The simulator looks for changes in the input testvector hence the format .vcd occurs.
  
  ![github-small](https://github.com/srimathiramasamy/Sky130-RTL-Design-and-Synthesis/blob/main/2.PNG)
  
- ### LAB
+ #### LAB
   
   list of verilog files available for lab
   
@@ -143,7 +143,7 @@ gtkwave testbenchfile.vcd
   
 ![github-small](https://github.com/srimathiramasamy/Sky130-RTL-Design-and-Synthesis/blob/main/1.11.PNG)
 
-## YOSYS
+### YOSYS
 
 Synthesizer is the tool which converts the RTL to the netlist. In this flow we use yosys as the synthesizer.
 
@@ -191,7 +191,7 @@ mux realied in terms of the library mentioned.
 
 ![github-small](https://github.com/srimathiramasamy/Sky130-RTL-Design-and-Synthesis/blob/main/22.PNG)
 
-## LIBRARY FILES
+### LIBRARY FILES
 .lib is the collection of all the standard cell. contains various versions of the same gates (slow, fast, medium speed). It will be rich enough to implement any logic function. The requirement of different flavors of gates is due to the combinational delay of the logic circuit determines the speed of the circuit.
 
 ![github-small](https://github.com/srimathiramasamy/Sky130-RTL-Design-and-Synthesis/blob/main/2.2.PNG)
@@ -201,7 +201,7 @@ fclk=1/tclk
 
 tclk is the minimum clk period needed and fclk will be the maximum clk frequency. For the maximum performance the delay should be minimum, this can be acheived by faster cells which eliminates the requirement of the medium and slow cells.
 
-### Requirement of Slow cells 
+#### Requirement of Slow cells 
 
 To ensure the absence of hold related time issues in the flop b there is requiremtn of slow cells, where the delay should be minimum. Thus we require fast cells to meet the performance and slow cells to meet the hold. The load in the circuits is the capacitor, the faster the charging and the discharging the faster the circuit operates.
 * wider transistors provide low delay - more area and power consumption
@@ -258,7 +258,7 @@ flaten
 
 ![github-small](https://github.com/srimathiramasamy/Sky130-RTL-Design-and-Synthesis/blob/main/36.PNG)
 
-## FLIP FLOP CODING STYLES
+### FLIP FLOP CODING STYLES
 
 
 
@@ -299,23 +299,23 @@ flaten
 ![github-small](https://github.com/srimathiramasamy/Sky130-RTL-Design-and-Synthesis/blob/main/4.18.PNG)
 ![github-small](https://github.com/srimathiramasamy/Sky130-RTL-Design-and-Synthesis/blob/main/4.19.PNG)
 
-## SEQUENTIAL LOGIC OPTIMIZATION
+### SEQUENTIAL LOGIC OPTIMIZATION
 
-## SEQUENTIAL LOGIC OPTMIZATION FOR UNUSED OUPUTS
+### SEQUENTIAL LOGIC OPTMIZATION FOR UNUSED OUPUTS
 
 ## DAY 4
 
-## GLS SYNTHESIS AND SIMULATION MISMATCH
+### GLS SYNTHESIS AND SIMULATION MISMATCH
 
-## GLS LAB
+### GLS LAB
 
 ## DAY 5
 
-## IF CASE CONSTRUCTS
+### IF CASE CONSTRUCTS
 
-## LAB FOR IF CASE
+### LAB FOR IF CASE
 
-## FOR LOOP AND FOR GENERATE
+### FOR LOOP AND FOR GENERATE
 
-## LAB FOR LOOP AND FOR GENERATE
+### LAB FOR LOOP AND FOR GENERATE
 
