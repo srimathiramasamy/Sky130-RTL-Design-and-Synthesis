@@ -55,4 +55,9 @@ In this repo we have used the "IVERILOG" for out RTL code simulation.
  
  ![github-small](https://github.com/srimathiramasamy/Sky130-RTL-Design-and-Synthesis/blob/main/2.PNG)
  
+ ##gtkwave - waveform viewer
+ 
+ The tool for viewing the waveform is gtkwaveform viewer, where the window pops up containing the stimulus where the functionality of the RTL design can be justified.
+ 
+ 
  
