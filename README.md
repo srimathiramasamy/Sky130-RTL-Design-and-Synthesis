@@ -33,17 +33,17 @@ This repository includes the design and synthesis of RTL codes with the use of t
 
 ## LAB SETUP
  
- *create a directory called 'VLSI' in the home path
- *install the vsdflow
+ * create a directory called 'VLSI' in the home path
+ * install the vsdflow
  a directory called vsdflow is created and the required files are clones  
  
- $mkdir VLSI
- $cd VLSI
- $ls
+ $ mkdir VLSI
+ $ cd VLSI
+ $ ls
  
- *git clone 
+ * git clone 
  
- $git clone https://github.com/kunalg123/sky130RTLDesignAndSynthesisWorksop.git
+ $ git clone https://github.com/kunalg123/sky130RTLDesignAndSynthesisWorksop.git
  
 directory sky130RTLDesignAnd SynthesisWorshop gets created
 
@@ -53,7 +53,7 @@ files present in the directory
  ![github-small](https://github.com/srimathiramasamy/Sky130-RTL-Design-and-Synthesis/blob/main/1.1.PNG)
  
  
- ##gtkwave - waveform viewer
+ ## gtkwave - waveform viewer
  
  The tool for viewing the waveform is gtkwaveform viewer, where the window pops up containing the stimulus where the functionality of the RTL design can be justified.
  
@@ -102,21 +102,21 @@ In this repo we have used the "IVERILOG" for out RTL code simulation.
   
   [github-small](https://github.com/srimathiramasamy/Sky130-RTL-Design-and-Synthesis/blob/main/1.6.PNG)
   
-  $ls // views all the files present in the current working directory
+  $ ls // views all the files present in the current working directory
   
-  *simulation of the RTL code
+  * simulation of the RTL code
   
  [github-small](https://github.com/srimathiramasamy/Sky130-RTL-Design-and-Synthesis/blob/main/1.9.PNG)
  
- $iverilog designfile testbenchfile
- $ls
- $./a.out
+ $ iverilog designfile testbenchfile
+ $ ls
+ $ ./a.out
  
- *gtkwaveform viewer
+ * gtkwaveform viewer
  
  [hithub-small](https://github.com/srimathiramasamy/Sky130-RTL-Design-and-Synthesis/blob/main/1.10.PNG)
  
- $gtkwave testbenchfile.vcd
+ $ gtkwave testbenchfile.vcd
  
  
  
