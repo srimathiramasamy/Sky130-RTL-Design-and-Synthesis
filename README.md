@@ -31,6 +31,7 @@ This repository includes the design and synthesis of RTL codes with the use of t
 * [FOR LOOP AND FOR GENERATE](#FOR-LOOP-AND-FOR-GENERATE)
 * [LAB FOR LOOP AND FOR GENERATE](#LAB-FOR-LOOP-AND-FOR-GENERATE)
 
+--[ACKNOWLEDGEMENT](#ACKNOWLEDGEMENT)
 
  ## DAY 1
  The first day of the workhop covers the simaulation part of the RTL design alonng with the brief description about the usage of the tools such as iverilog, gtkwave and yosys. It also provides the detailed note on the sky130 library used. 
@@ -419,16 +420,191 @@ assign y=sel?i0:i1; //implement the mux
 ![github-small](https://github.com/srimathiramasamy/Sky130-RTL-Design-and-Synthesis/blob/main/l48.PNG)
 ![github-small](https://github.com/srimathiramasamy/Sky130-RTL-Design-and-Synthesis/blob/main/l49.PNG)
 
-
+![github-small](https://github.com/srimathiramasamy/Sky130-RTL-Design-and-Synthesis/blob/main/4b1.PNG)
+![github-small](https://github.com/srimathiramasamy/Sky130-RTL-Design-and-Synthesis/blob/main/4b2.PNG)
 
 
 ## DAY 5
 
 ### IF CASE CONSTRUCTS
+If statement is mainly used to create priority logc
+
+```
+if(condtion1)
+code
+elseif(condition2)
+code
+else
+code
+```
+the condition1 has the most priority followed by the seconf condition
+
+if - danger/caution
+* inferrred latches (latches are not intended)
+this occurs due to bad coding styles (incmplete if statements)
+
+```
+if(c1)
+y=a;
+elseif(c2)
+y=b;
+.
+.
+```
+if neither the consitons does not happen it tries to retain the values of the output thus the latches are inferred in such cases.
 
 ### LAB FOR IF CASE
 
+```
+module incomp_if (input i0 , input i1 , input i2 , output reg y);
+always @ (*)
+begin
+	if(i0)
+		y <= i1;
+end
+endmodule
+```
+it is a d latch (positive latch)
+
+```
+module incomp_if2 (input i0 , input i1 , input i2 , input i3, output reg y);
+always @ (*)
+begin
+	if(i0)
+		y <= i1;
+	else if (i2)
+		y <= i3;
+
+end
+endmodule
+```
+
+```
+read_liberty -lib /my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_verilog incomp_if.v
+synth -top incmp_if
+abc -liberty lib /my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+show
+```
+
+
+```
+module comp_case (input i0 , input i1 , input i2 , input [1:0] sel, output reg y);
+always @ (*)
+begin
+	case(sel)
+		2'b00 : y = i0;
+		2'b01 : y = i1;
+		default : y = i2;
+	endcase
+end
+endmodule
+```
+
+depending on the select the values are assigned, there occurs a latchign condtion
+
+```
+module incomp_case (input i0 , input i1 , input i2 , input [1:0] sel, output reg y);
+always @ (*)
+begin
+	case(sel)
+		2'b00 : y = i0;
+		2'b01 : y = i1;
+	endcase
+end
+endmodule
+```
+
 ### FOR LOOP AND FOR GENERATE
+
+* for loop - used inside always
+* generate followed by for loop - used outside always
+Generate for loop is used for instantiate the hardware multiple times. The plain for loop used in always is used for evaluating expressions
 
 ### LAB FOR LOOP AND FOR GENERATE
 
+```
+module mux_generate (input i0 , input i1, input i2 , input i3 , input [1:0] sel  , output reg y);
+wire [3:0] i_int;
+assign i_int = {i3,i2,i1,i0};
+integer k;
+always @ (*)
+begin
+for(k = 0; k < 4; k=k+1) begin
+	if(k == sel)
+		y = i_int[k];
+end
+end
+endmodule
+```
+
+demux in terms of case and loop statements
+
+```
+module demux_case (output o0 , output o1, output o2 , output o3, output o4, output o5, output o6 , output o7 , input [2:0] sel  , input i);
+reg [7:0]y_int;
+assign {o7,o6,o5,o4,o3,o2,o1,o0} = y_int;
+integer k;
+always @ (*)
+begin
+y_int = 8'b0;
+	case(sel)
+		3'b000 : y_int[0] = i;
+		3'b001 : y_int[1] = i;
+		3'b010 : y_int[2] = i;
+		3'b011 : y_int[3] = i;
+		3'b100 : y_int[4] = i;
+		3'b101 : y_int[5] = i;
+		3'b110 : y_int[6] = i;
+		3'b111 : y_int[7] = i;
+	endcase
+
+end
+endmodule
+
+```
+
+```
+module demux_generate (output o0 , output o1, output o2 , output o3, output o4, output o5, output o6 , output o7 , input [2:0] sel  , input i);
+reg [7:0]y_int;
+assign {o7,o6,o5,o4,o3,o2,o1,o0} = y_int;
+integer k;
+always @ (*)
+begin
+y_int = 8'b0;
+for(k = 0; k < 8; k++) begin
+	if(k == sel)
+		y_int[k] = i;
+end
+end
+endmodule
+```
+
+There is no always statement here in the code, there are seven full adders instantiated here
+
+```
+module rca (input [7:0] num1 , input [7:0] num2 , output [8:0] sum);
+wire [7:0] int_sum;
+wire [7:0]int_co;
+
+genvar i;
+generate
+	for (i = 1 ; i < 8; i=i+1) begin
+		fa u_fa_1 (.a(num1[i]),.b(num2[i]),.c(int_co[i-1]),.co(int_co[i]),.sum(int_sum[i]));
+	end
+
+endgenerate
+fa u_fa_0 (.a(num1[0]),.b(num2[0]),.c(1'b0),.co(int_co[0]),.sum(int_sum[0]));
+
+
+assign sum[7:0] = int_sum;
+assign sum[8] = int_co[7];
+endmodule
+```
+
+From the five day worksop the RTL Design and Syntheis is very clear regarding all the theoretical concepts as well as the practical concepts. Concepts regarding the simulator, waveform viewer and synthsis are practically implmented in the lab sessions, along with various design modules and testbench. The generation of the netlist and the analysis of the standard library is implemented. It provided a analysis on the design module regarding the functionality and the timing.
+
+##ACKNOWLEDGEMENT
+
+1. Kunal Ghosh - Co-founder(VSD Corp. Pvt. Ltd)
+2. Shon Taware - VSD Teaching Assistant
