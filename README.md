@@ -45,4 +45,5 @@ In this repo we have used the "IVERILOG" for out RTL code simulation.
 ## Working of the simulator
  It mainly relays on the change in the input. If there are is no change in the input test vector then there will be no chnage in the output, the simulator will not eveluate the output in this condition.
  
+ ![github-small](https://github.com/srimathiramasamy/Sky130-RTL-Design-and-Synthesis/blob/main/123.PNG)
  
