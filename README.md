@@ -452,8 +452,11 @@ y=b;
 .
 ```
 if neither the consitons does not happen it tries to retain the values of the output thus the latches are inferred in such cases.
+![github-small](https://github.com/srimathiramasamy/Sky130-RTL-Design-and-Synthesis/blob/main/if.PNG)
 
 ### LAB FOR IF CASE
+![github-small](https://github.com/srimathiramasamy/Sky130-RTL-Design-and-Synthesis/blob/main/5.PNG)
+
 
 ```
 module incomp_if (input i0 , input i1 , input i2 , output reg y);
@@ -465,7 +468,7 @@ end
 endmodule
 ```
 it is a d latch (positive latch)
-
+![github-small](https://github.com/srimathiramasamy/Sky130-RTL-Design-and-Synthesis/blob/main/latch.PNG)
 ```
 module incomp_if2 (input i0 , input i1 , input i2 , input i3, output reg y);
 always @ (*)
@@ -514,6 +517,16 @@ begin
 end
 endmodule
 ```
+![github-small](https://github.com/srimathiramasamy/Sky130-RTL-Design-and-Synthesis/blob/main/incmo2.PNG)
+![github-small](https://github.com/srimathiramasamy/Sky130-RTL-Design-and-Synthesis/blob/main/incmo3.PNG)
+![github-small](https://github.com/srimathiramasamy/Sky130-RTL-Design-and-Synthesis/blob/main/incmo4.PNG)
+
+![github-small](https://github.com/srimathiramasamy/Sky130-RTL-Design-and-Synthesis/blob/main/incmocase.PNG)
+![github-small](https://github.com/srimathiramasamy/Sky130-RTL-Design-and-Synthesis/blob/main/incomcase.PNG)
+
+![github-small](https://github.com/srimathiramasamy/Sky130-RTL-Design-and-Synthesis/blob/main/incmop2.PNG)
+
+
 
 ### FOR LOOP AND FOR GENERATE
 
@@ -579,6 +592,7 @@ end
 end
 endmodule
 ```
+![github-small](https://github.com/srimathiramasamy/Sky130-RTL-Design-and-Synthesis/blob/main/demuxge.PNG)
 
 There is no always statement here in the code, there are seven full adders instantiated here
 
@@ -601,10 +615,19 @@ assign sum[7:0] = int_sum;
 assign sum[8] = int_co[7];
 endmodule
 ```
+![github-small](https://github.com/srimathiramasamy/Sky130-RTL-Design-and-Synthesis/blob/main/for1.PNG)
+![github-small](https://github.com/srimathiramasamy/Sky130-RTL-Design-and-Synthesis/blob/main/for2.PNG)
+![github-small](https://github.com/srimathiramasamy/Sky130-RTL-Design-and-Synthesis/blob/main/for3.PNG)
+![github-small](https://github.com/srimathiramasamy/Sky130-RTL-Design-and-Synthesis/blob/main/forg1.PNG)
+![github-small](https://github.com/srimathiramasamy/Sky130-RTL-Design-and-Synthesis/blob/main/forg2.PNG)
+![github-small](https://github.com/srimathiramasamy/Sky130-RTL-Design-and-Synthesis/blob/main/forg3.PNG)
+![github-small](https://github.com/srimathiramasamy/Sky130-RTL-Design-and-Synthesis/blob/main/forg.PNG)
+
+
 
 From the five day worksop the RTL Design and Syntheis is very clear regarding all the theoretical concepts as well as the practical concepts. Concepts regarding the simulator, waveform viewer and synthsis are practically implmented in the lab sessions, along with various design modules and testbench. The generation of the netlist and the analysis of the standard library is implemented. It provided a analysis on the design module regarding the functionality and the timing.
 
-##ACKNOWLEDGEMENT
+## ACKNOWLEDGEMENT
 
 1. Kunal Ghosh - Co-founder(VSD Corp. Pvt. Ltd)
 2. Shon Taware - VSD Teaching Assistant
