@@ -75,8 +75,8 @@ files present in the directory
  
  verilog files conatins all the source and the testbench files which will be used for the lab
  
- [github-small](https://github.com/srimathiramasamy/Sky130-RTL-Design-and-Synthesis/blob/main/1.6.PNG)
- [github-small](https://github.com/srimathiramasamy/Sky130-RTL-Design-and-Synthesis/blob/main/1.7.PNG)
+ ![github-small](https://github.com/srimathiramasamy/Sky130-RTL-Design-and-Synthesis/blob/main/1.6.PNG)
+ ![github-small](https://github.com/srimathiramasamy/Sky130-RTL-Design-and-Synthesis/blob/main/1.7.PNG)
 
 ## Simulator iverilog
    Design is the set of verilog codes which intends to meet the specifications. The testbench is the setup appied to the desing with a set of test vector to check working of thedesign module.
@@ -143,7 +143,7 @@ gtkwave testbenchfile.vcd
   
 ![github-small](https://github.com/srimathiramasamy/Sky130-RTL-Design-and-Synthesis/blob/main/1.11.PNG)
 
-##YOSYS
+## YOSYS
 
 Synthesizer is the tool which converts the RTL to the netlist. In this flow we use yosys as the synthesizer.
 
