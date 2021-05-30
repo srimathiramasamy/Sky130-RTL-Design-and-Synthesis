@@ -351,9 +351,76 @@ counter_opt2
 
 ## DAY 4
 
+GLS stands for gate level simulation. RTL code validated by testing as per the specifications. 
+Run the testbench in the GLS with the netlist as the design under test, as the netlist wil be fit in the place of the RTL code as both meets the same.
+
+Why run GLS?
+To verify the logical correctness of the design after synthesis
+During simulation there is notion of timing, but for the desing to work the timing playa a key role it should be met.
+The GLS should be run with the delay annotation.
+
+#### GLS USING IVERILOG
+
+The desing is the netlist, we need to read the gate level verilog models in addtion to the regular steps in the part of simulation including the design, testbench, gtkwave form viewer.
+
 ### GLS SYNTHESIS AND SIMULATION MISMATCH
 
+Major reasons are
+* missing sensitivity list
+* blocking and non - blocking assignments
+* non - standard verilog coding
+
+#### MISSING SENSITIVITY LIST
+
+In verilog simulator works based on activity of the change in the inputs, no activity the output is not evaluated. 
+In a MUX is evaluated only when the select is changing it also concerns the process,
+when the select is low activity on input0
+when the select is high activity on input1
+during RTL simulation it looks like a latch as the entire process depends on the select  line in the mux.
+ The correct way of the code is :
+ 
+ ```
+ module mux(input i0, input i1, input sel,output reg y)
+ always@(*)
+ begin
+ if(sel)
+ y=i1;
+ else
+ y=i0;
+ end
+ endmodule
+ ```
+#### BLOCKING AND NON - BLOCKING ASSIGNMENTS
+
+The blocking and non - blocking comes under picture when we use always block.
+Blocking statement - It executes in the order of statement written.
+Non - Blocking statement - it is mostly parallel evaluation of the statements. It executes the RHS and assigns to the LHS, the order does'nt matters here.
+
+
 ### GLS LAB
+Requiremnet - 
+* netlist
+* verilog models
+* testbench
+Working of the ternary operator
+```
+<condition>?(true>:<false>
+assign y=sel?i0:i1; //implement the mux
+
+```
+
+![github-small](https://github.com/srimathiramasamy/Sky130-RTL-Design-and-Synthesis/blob/main/l41.PNG)
+![github-small](https://github.com/srimathiramasamy/Sky130-RTL-Design-and-Synthesis/blob/main/l42.PNG)
+![github-small](https://github.com/srimathiramasamy/Sky130-RTL-Design-and-Synthesis/blob/main/l43.PNG)
+![github-small](https://github.com/srimathiramasamy/Sky130-RTL-Design-and-Synthesis/blob/main/l44.PNG)
+![github-small](https://github.com/srimathiramasamy/Sky130-RTL-Design-and-Synthesis/blob/main/l45.PNG)
+![github-small](https://github.com/srimathiramasamy/Sky130-RTL-Design-and-Synthesis/blob/main/l46.PNG)
+![github-small](https://github.com/srimathiramasamy/Sky130-RTL-Design-and-Synthesis/blob/main/l47.PNG)
+![github-small](https://github.com/srimathiramasamy/Sky130-RTL-Design-and-Synthesis/blob/main/l48.PNG)
+![github-small](https://github.com/srimathiramasamy/Sky130-RTL-Design-and-Synthesis/blob/main/l49.PNG)
+
+
+
 
 ## DAY 5
 
