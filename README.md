@@ -51,6 +51,8 @@ In this repo we have used the "IVERILOG" for out RTL code simulation.
  
  ## iverilog simulation flow
  
+ ![github-small](https://github.com/srimathiramasamy/Sky130-RTL-Design-and-Synthesis/blob/main/2.PNG)
+ 
  
  
  
