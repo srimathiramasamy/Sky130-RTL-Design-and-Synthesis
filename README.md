@@ -11,23 +11,21 @@ This repository includes the design and synthesis of RTL codes with the use of t
 * [Simulator iverilog](#Simulator-iverilog)
 * [YOSYS](#YOSYS)
 * [LIBRARY FILES](#LIBRARY-FILES)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+-[DAY 2](#DAY-2)
+* [HIERACHIAL AND FLAT SYNTHESIS](#HIERACHIAL-AND-FLAT-SYNTHESIS)
+* [FLIP FLOP CODING STYLES](#FLIP-FLOP-CODING-STYLES)
+-[DAY 3](#DAY-3)
+* [COMBINATIONAL LOGIC OPTIMIZATION](#COMBINATIONAL-LOGIC-OPTIMIZATION)
+* [SEQUENTIAL LOGIC OPTIMIZATION](#SEQUENTIAL-LOGIC-OPTIMIZATION]
+* [SEQUENTIAL LOGIC OPTIMIZATION FOR UNUSED OUTPUTS](#SEQUENTIAL-LOGIC-OPTIMIZATION-FOR-UNUSED-OUTPUTS)
+-[DAY 4](#DAY-4)
+* [GLS SYNTHESIS AND SIMULATION MISMATCH](#GLS-SYNTHESIS-AND SIMULATION-MISMATCH)
+* [GLS LAB](#LAB-GLS)
+-[DAY 5](#DAY-5)
+* [IF CASE CONSTRUCTS](#IF-CASE-CONSTRUCTS)
+* [LAB FOR IF CASE](#LAB-FOR-IF-CASE)
+* [FOR LOOP AND FOR GENERATE](#FOR-LOOP-AND-FOR-GENERATE)
+* [LAB FOR LOOP AND FOR GENERATE](#LAB-FOR-LOOP-AND-FOR-GENERATE]
 
  ## DAY 1
  The first day of the workhop covers the simaulation part of the RTL design alonng with the brief description about the usage of the tools such as iverilog, gtkwave and yosys. It also provides the detailed note on the sky130 library used. 
