@@ -100,13 +100,13 @@ In this repo we have used the "IVERILOG" for out RTL code simulation.
   
   list of verilog files available for lab
   
-  [github-small](https://github.com/srimathiramasamy/Sky130-RTL-Design-and-Synthesis/blob/main/1.6.PNG)
+  ![github-small](https://github.com/srimathiramasamy/Sky130-RTL-Design-and-Synthesis/blob/main/1.6.PNG)
   
   $ ls // views all the files present in the current working directory
   
   * simulation of the RTL code
   
- [github-small](https://github.com/srimathiramasamy/Sky130-RTL-Design-and-Synthesis/blob/main/1.9.PNG)
+ ![github-small](https://github.com/srimathiramasamy/Sky130-RTL-Design-and-Synthesis/blob/main/1.9.PNG)
  
  $ iverilog designfile testbenchfile
  $ ls
@@ -114,9 +114,11 @@ In this repo we have used the "IVERILOG" for out RTL code simulation.
  
  * gtkwaveform viewer
  
- [hithub-small](https://github.com/srimathiramasamy/Sky130-RTL-Design-and-Synthesis/blob/main/1.10.PNG)
+ ![github-small](https://github.com/srimathiramasamy/Sky130-RTL-Design-and-Synthesis/blob/main/1.10.PNG)
  
- $ gtkwave testbenchfile.vcd
+ ```
+gtkwave testbenchfile.vcd
+```
  
  
  
