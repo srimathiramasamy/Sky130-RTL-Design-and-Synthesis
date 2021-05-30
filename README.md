@@ -299,5 +299,23 @@ flaten
 ![github-small](https://github.com/srimathiramasamy/Sky130-RTL-Design-and-Synthesis/blob/main/4.18.PNG)
 ![github-small](https://github.com/srimathiramasamy/Sky130-RTL-Design-and-Synthesis/blob/main/4.19.PNG)
 
-## LAB FOR for Sequential Optimizations for unused inputs
+## SEQUENTIAL LOGIC OPTIMIZATION
+
+## SEQUENTIAL LOGIC OPTMIZATION FOR UNUSED OUPUTS
+
+## DAY 4
+
+## GLS SYNTHESIS AND SIMULATION MISMATCH
+
+## GLS LAB
+
+## DAY 5
+
+## IF CASE CONSTRUCTS
+
+## LAB FOR IF CASE
+
+## FOR LOOP AND FOR GENERATE
+
+## LAB FOR LOOP AND FOR GENERATE
 
