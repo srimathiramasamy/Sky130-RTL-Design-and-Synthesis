@@ -4,7 +4,7 @@ This repository includes the design and synthesis of RTL codes with the use of t
 
 ![github-small](https://github.com/srimathiramasamy/Sky130-RTL-Design-and-Synthesis/blob/main/Capture.PNG)
 
-##Table of contents
+## Table of contents
 - [DAY -1 ](#Day -1)
   * [Simulator - iverilog](#SImulator - iverilog)
   * [gtkwave](#gtkwave)
@@ -26,6 +26,6 @@ This repository includes the design and synthesis of RTL codes with the use of t
   * [Incomplete Sensitivity List](#Incomplete-Sensitivity-List)
   * [Blocking Assignments](#Blocking-Assignments)
  
- ##DAY -1
+ ## DAY -1
  The first day of the workhop covers the simaulation part of the RTL design alonng with the brief description about the usage of the tools such as iverilog, gtkwave and yosys. It also provides the detailed note on the sky130 library used. 
  There are many open source tools available for the front-end RTL design. The list of tools used in this repo are mentioned below
