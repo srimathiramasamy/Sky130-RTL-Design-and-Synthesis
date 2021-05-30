@@ -213,7 +213,7 @@ more use of fast cells - hold violationns
 ## DAY - 2
 
  
-### Hierachial and flat synthesis
+### HIERACHIAL AND FLAT SYNTHESIS
 
 * submodule2
 
@@ -258,7 +258,7 @@ flaten
 
 ![github-small](https://github.com/srimathiramasamy/Sky130-RTL-Design-and-Synthesis/blob/main/36.PNG)
 
-## FLIPFLOP CODING STYLES
+## FLIP FLOP CODING STYLES
 
 
 
@@ -274,7 +274,7 @@ flaten
 ![github-small](https://github.com/srimathiramasamy/Sky130-RTL-Design-and-Synthesis/blob/main/3.7.PNG)
 
 
-### OPTMIZATIONS OF DESING MODULES
+### COMBINATIONAL LOGIC OPTIMIZATION
 
 ![github-small](https://github.com/srimathiramasamy/Sky130-RTL-Design-and-Synthesis/blob/main/4.1.PNG)
 
