@@ -37,14 +37,16 @@ This repository includes the design and synthesis of RTL codes with the use of t
  * install the vsdflow
  a directory called vsdflow is created and the required files are clones  
  
- $ mkdir VLSI
- $ cd VLSI
- $ ls
+```
+ mkdir VLSI
+ cd VLSI
+ ls
+```
  
  * git clone 
- 
- $ git clone https://github.com/kunalg123/sky130RTLDesignAndSynthesisWorksop.git
- 
+ ```
+ git clone https://github.com/kunalg123/sky130RTLDesignAndSynthesisWorksop.git
+ ```
 directory sky130RTLDesignAnd SynthesisWorshop gets created
 
 files present in the directory
@@ -102,17 +104,20 @@ In this repo we have used the "IVERILOG" for out RTL code simulation.
   
   ![github-small](https://github.com/srimathiramasamy/Sky130-RTL-Design-and-Synthesis/blob/main/1.6.PNG)
   
-  $ ls // views all the files present in the current working directory
+  ```
+  ls // views all the files present in the current working directory
+  ```
   
   * simulation of the RTL code
   
  ![github-small](https://github.com/srimathiramasamy/Sky130-RTL-Design-and-Synthesis/blob/main/1.9.PNG)
- 
- $ iverilog designfile testbenchfile
- $ ls
- $ ./a.out
- 
+ ```
+  iverilog designfile testbenchfile
+  ls
+  ./a.out
+ ```
  * gtkwaveform viewer
+The inputs and the outputs can be dragged and dropped in the viewer. To see the entire observation on the single window click zoomfit. To look for the transition of the signal use the arrow for forward and the backward transitions. This can be used for the evaluation of the design.
  
  ![github-small](https://github.com/srimathiramasamy/Sky130-RTL-Design-and-Synthesis/blob/main/1.10.PNG)
  
@@ -120,7 +125,18 @@ In this repo we have used the "IVERILOG" for out RTL code simulation.
 gtkwave testbenchfile.vcd
 ```
  
- 
+ ![github-small](https://github.com/srimathiramasamy/Sky130-RTL-Design-and-Synthesis/blob/main/gtk1.PNG)
+  
+  The waveform viewer depicts the functionality of the desing with respect to the stimulus provided.
+  
+  we have used the multipler code for the simulation
+  
+![github-small](https://github.com/srimathiramasamy/Sky130-RTL-Design-and-Synthesis/blob/main/1.12.PNG)
+  
+  testbench for the multiplexer
+  
+![github-small](https://github.com/srimathiramasamy/Sky130-RTL-Design-and-Synthesis/blob/main/1.11.PNG)
+
  
  
  
