@@ -96,6 +96,27 @@ In this repo we have used the "IVERILOG" for out RTL code simulation.
  
  ![github-small](https://github.com/srimathiramasamy/Sky130-RTL-Design-and-Synthesis/blob/main/2.PNG)
  
+ ### LAB
+  
+  list of verilog files available for lab
+  
+  [github-small](https://github.com/srimathiramasamy/Sky130-RTL-Design-and-Synthesis/blob/main/1.6.PNG)
+  
+  $ls // views all the files present in the current working directory
+  
+  *simulation of the RTL code
+  
+ [github-small](https://github.com/srimathiramasamy/Sky130-RTL-Design-and-Synthesis/blob/main/1.9.PNG)
+ 
+ $iverilog designfile testbenchfile
+ $ls
+ $./a.out
+ 
+ *gtkwaveform viewer
+ 
+ [hithub-small](https://github.com/srimathiramasamy/Sky130-RTL-Design-and-Synthesis/blob/main/1.10.PNG)
+ 
+ $gtkwave testbenchfile.vcd
  
  
  
