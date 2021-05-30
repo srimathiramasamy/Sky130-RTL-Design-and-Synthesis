@@ -5,7 +5,7 @@ This repository includes the design and synthesis of RTL codes with the use of t
 ![github-small](https://github.com/srimathiramasamy/Sky130-RTL-Design-and-Synthesis/blob/main/Capture.PNG)
 
 ## Table of contents
-- [DAY 1](#DAY-1)
+-[DAY 1](#DAY-1)
 * [LAB SETUP](#LAB-SETUP)
 * [gtkwave waveform viewer](#gtkwave-waveform-viewer)
 * [Simulator iverilog](#Simulator-iverilog)
